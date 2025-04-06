@@ -1,3 +1,5 @@
+import java.util.List;
+
 public abstract class Pokemon {
 
     private String name;
@@ -7,8 +9,8 @@ public abstract class Pokemon {
     private String food;
     private String type;
 
-    public Pokemon(String food, int hp, int level, String name, String sound) {
-        this.food = food;
+    public Pokemon(String name, int hp, int level, String food, String sound) {
+        this.food = name;
         this.hp = hp;
         this.level = level;
         this.name = name;
@@ -62,4 +64,8 @@ public abstract class Pokemon {
     public void setType(String type) {
         this.type = type;
     }
+
+    abstract List<String> getAttacks();
+
+
 }
